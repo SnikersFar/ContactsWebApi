@@ -58,6 +58,12 @@ namespace ContactsWebAPI.EfStuff.Repository
             }
 
             _webContext.SaveChanges();
+
         }
+        public List<Template> GetForPagination(int perPage, int page)
+            => _dbSet
+            .Skip((page - 1) * perPage)
+            .Take(perPage)
+            .ToList();
     }
 }

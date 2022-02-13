@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,13 +34,17 @@ namespace ContactsWebAPI
             services.AddScoped<PhotoRepository>();
 
             services.AddControllersWithViews();
-
+            services.AddMvc();
 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
+            loggerFactory.AddFile("Logs/Info-{Date}.txt",
+                outputTemplate: "[{Level}] Smile {Timestamp:o} {Message} {NewLine}{Exception}");
+            loggerFactory.AddFile("Logs/ERROR-{Date}.txt", LogLevel.Error);
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

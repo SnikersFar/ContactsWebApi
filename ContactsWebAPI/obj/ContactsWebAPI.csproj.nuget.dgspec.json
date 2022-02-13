@@ -69,6 +69,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.12, )"
+            },
+            "Serilog.Extensions.Logging.File": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "ServiceStack.Text": {
+              "target": "Package",
+              "version": "[6.0.2, )"
             }
           },
           "imports": [
