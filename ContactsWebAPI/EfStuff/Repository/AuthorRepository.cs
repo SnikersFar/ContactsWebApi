@@ -1,4 +1,5 @@
 ﻿using ContactsWebAPI.EfStuff.DbModel;
+using System;
 
 namespace ContactsWebAPI.EfStuff.Repository
 {
@@ -7,5 +8,6 @@ namespace ContactsWebAPI.EfStuff.Repository
         public AuthorRepository(WebContext webContext) : base(webContext)
         {
         }
+
     }
 }

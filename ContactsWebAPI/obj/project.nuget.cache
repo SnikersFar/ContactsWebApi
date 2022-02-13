@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "l+XwBppzA/hgI8MdX0PIv3J/AKhZ8Lt/7GWWrEycUXMUca0I6RtuZkJeF7LwuRMeCxKFMeeJdZ88XzRr6Aq9XA==",
+  "dgSpecHash": "AK0ZqwpN35PIwAb1JQHjWcy631Ef94Mj8le6o4m+HSOF+MdIX7VbGgpAfuCso/TF0XUL14gb+B2svpAo5u3r6Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\uvev1\\source\\repos\\ContactsWebAPI\\ContactsWebAPI\\ContactsWebAPI.csproj",
+  "projectFilePath": "C:\\Users\\uvev1\\Source\\Repos\\ContactsWebApi\\ContactsWebAPI\\ContactsWebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\uvev1\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
     "C:\\Users\\uvev1\\.nuget\\packages\\entityframework.migrations\\7.0.0-beta2\\entityframework.migrations.7.0.0-beta2.nupkg.sha512",
