@@ -1,4 +1,5 @@
 using ContactsWebAPI.EfStuff;
+using ContactsWebAPI.EfStuff.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -26,6 +27,11 @@ namespace ContactsWebAPI
         {
             string connectString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=WebMaze12;Integrated Security=True;";
             services.AddDbContext<WebContext>(x => x.UseSqlServer(connectString));
+
+            services.AddScoped<AuthorRepository>();
+            services.AddScoped<TextRepository>();
+            services.AddScoped<PhotoRepository>();
+
             services.AddControllersWithViews();
 
 
