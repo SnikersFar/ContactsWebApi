@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "P7q6gTVm+RccvBneMefYd2kogpk3OTIe08PfE53+AQTFbA7Ct6BqPsT/wyHqC8qIuyGQxAWkEAp0ZQz9xJ9sUA==",
+  "dgSpecHash": "h9iBvtyS3P6B7XpfOkZYLcChZVabEovz7BmlvnEMwI45WRWqclNFG3WJLDx+sDozbHvZ7QTHjortlEg5KVoI1g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\uvev1\\Source\\Repos\\ContactsWebApi\\ContactsWebAPI\\ContactsWebAPI.csproj",
+  "projectFilePath": "C:\\Users\\uvev1\\source\\repos\\ContactsWebAPI\\ContactsWebAPI\\ContactsWebAPI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\uvev1\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\uvev1\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
     "C:\\Users\\uvev1\\.nuget\\packages\\entityframework.migrations\\7.0.0-beta2\\entityframework.migrations.7.0.0-beta2.nupkg.sha512",
     "C:\\Users\\uvev1\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

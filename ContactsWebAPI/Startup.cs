@@ -1,5 +1,8 @@
+using AutoMapper;
 using ContactsWebAPI.EfStuff;
+using ContactsWebAPI.EfStuff.DbModel;
 using ContactsWebAPI.EfStuff.Repository;
+using ContactsWebAPI.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -32,6 +35,19 @@ namespace ContactsWebAPI
             services.AddScoped<AuthorRepository>();
             services.AddScoped<TextRepository>();
             services.AddScoped<PhotoRepository>();
+
+            var provider = new MapperConfigurationExpression();
+            provider.CreateMap<Author, AuthorViewModel>();
+
+            provider.CreateMap<Text, TextViewModel>()
+                .ForMember(vw => vw.AutrhorId, db => db.MapFrom(model => model.Author.Id));
+            
+            provider.CreateMap<Photo, PhotoViewModel>()
+                .ForMember(vw => vw.AutrhorId, db => db.MapFrom(model => model.Author.Id));
+
+            var mapperConfiguration = new MapperConfiguration(provider);
+            var mapper = new Mapper(mapperConfiguration);
+            services.AddScoped<IMapper>(x => mapper);
 
             services.AddControllersWithViews();
             services.AddMvc();

@@ -1,4 +1,5 @@
-﻿using ContactsWebAPI.EfStuff.DbModel;
+﻿using AutoMapper;
+using ContactsWebAPI.EfStuff.DbModel;
 using ContactsWebAPI.EfStuff.Repository;
 using ContactsWebAPI.Models;
 using Microsoft.Extensions.Logging;
@@ -15,7 +16,7 @@ namespace ContactsWebAPI.Controllers
         private TextRepository _textRepository;
         private PhotoRepository _photoRepository;
         private ILogger<ApiDataController> _logger;
-
+        private IMapper _mapper;
         public ApiDataController
             (
             AuthorRepository authorRepository,
@@ -31,18 +32,27 @@ namespace ContactsWebAPI.Controllers
         }
 
         [HttpGet]
-        public DataViewModel GetAllInfo() => new DataViewModel
-        {
-            Authors = _authorRepository.GetAll(),
-            Texts = _textRepository.GetAll(),
-            Photos = _photoRepository.GetAll(),
-        };
+        public List<AuthorViewModel> GetAllInfo() => _mapper.Map<List<AuthorViewModel>>(_authorRepository.GetAll());
         [HttpGet]
-        public List<Photo> GetPhotos() => _photoRepository.GetAll();
+        public List<PhotoViewModel> GetPhotos() => _mapper.Map<List<PhotoViewModel>>(_photoRepository.GetAll());
         [HttpGet]
-        public Photo GetPhoto(long id) => _photoRepository.Get(id);
+        public PhotoViewModel GetPhoto(long id) => _mapper.Map<PhotoViewModel>(_photoRepository.Get(id));
         [HttpPut]
-        public void ChangePhoto(Photo photo) => _photoRepository.Save(photo);
+        public void ChangePhoto(PhotoViewModel photo)
+        {
+            var newPhoto = new Photo()
+            {
+                Id = photo.Id,
+                Author = _authorRepository.Get(photo.AutrhorId),
+                SizeOfPhoto = photo.SizeOfPhoto,
+                Cost = photo.Cost,
+                CountOfBuying = photo.CountOfBuying,
+                Name = photo.Name,
+                Rating = photo.Rating,
+                UrlContent = photo.UrlContent,
+            };
+            _photoRepository.Save(newPhoto);
+        }
         [HttpGet]
         public StringBuilder GetTexts()
         {
@@ -81,11 +91,22 @@ namespace ContactsWebAPI.Controllers
             }
         }
         [HttpPost]
-        public void AddText(Text text)
+        public void AddText(TextViewModel text)
         {
-            if (!(_authorRepository.Get(text.Author.Id) is null))
+            if (!(_authorRepository.Get(text.AutrhorId) is null))
             {
-                _textRepository.Save(text);
+                var NewPhoto = new Text()
+                {
+                    Author = _authorRepository.Get(text.AutrhorId),
+                    Content = text.Content,
+                    Size = text.Size,
+                    Cost = text.Cost,
+                    CountOfBuying = text.CountOfBuying,
+                    DateCreate = text.DateCreate,
+                    Name = text.Name,
+                    Rating = text.Rating,
+                };
+                _textRepository.Save(NewPhoto);
             }
         }
     }

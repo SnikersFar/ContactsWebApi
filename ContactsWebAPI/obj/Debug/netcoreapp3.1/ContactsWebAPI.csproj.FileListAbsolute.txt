@@ -37,9 +37,6 @@ C:\Users\uvev1\source\repos\ContactsWebAPI\ContactsWebAPI\obj\Debug\netcoreapp3.
 C:\Users\uvev1\source\repos\ContactsWebAPI\ContactsWebAPI\obj\Debug\netcoreapp3.1\ContactsWebAPI.TagHelpers.input.cache
 C:\Users\uvev1\source\repos\ContactsWebAPI\ContactsWebAPI\obj\Debug\netcoreapp3.1\ContactsWebAPI.TagHelpers.output.cache
 C:\Users\uvev1\source\repos\ContactsWebAPI\ContactsWebAPI\obj\Debug\netcoreapp3.1\ContactsWebAPI.RazorCoreGenerate.cache
-C:\Users\uvev1\source\repos\ContactsWebAPI\ContactsWebAPI\obj\Debug\netcoreapp3.1\Razor\Pages\Index.cshtml.g.cs
-C:\Users\uvev1\source\repos\ContactsWebAPI\ContactsWebAPI\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_Layout.cshtml.g.cs
-C:\Users\uvev1\source\repos\ContactsWebAPI\ContactsWebAPI\obj\Debug\netcoreapp3.1\Razor\Pages\_ViewStart.cshtml.g.cs
 C:\Users\uvev1\source\repos\ContactsWebAPI\ContactsWebAPI\obj\Debug\netcoreapp3.1\ContactsWebAPI.RazorTargetAssemblyInfo.cache
 C:\Users\uvev1\source\repos\ContactsWebAPI\ContactsWebAPI\obj\Debug\netcoreapp3.1\ContactsWebAPI.RazorTargetAssemblyInfo.cs
 C:\Users\uvev1\source\repos\ContactsWebAPI\ContactsWebAPI\obj\Debug\netcoreapp3.1\ContactsWebAPI.Views.pdb
@@ -78,3 +75,16 @@ C:\Users\uvev1\source\repos\ContactsWebAPI\ContactsWebAPI\bin\Debug\netcoreapp3.
 C:\Users\uvev1\source\repos\ContactsWebAPI\ContactsWebAPI\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\uvev1\source\repos\ContactsWebAPI\ContactsWebAPI\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 C:\Users\uvev1\source\repos\ContactsWebAPI\ContactsWebAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\uvev1\source\repos\ContactsWebAPI\ContactsWebAPI\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\uvev1\source\repos\ContactsWebAPI\ContactsWebAPI\bin\Debug\netcoreapp3.1\Serilog.dll
+C:\Users\uvev1\source\repos\ContactsWebAPI\ContactsWebAPI\bin\Debug\netcoreapp3.1\Serilog.Extensions.Logging.dll
+C:\Users\uvev1\source\repos\ContactsWebAPI\ContactsWebAPI\bin\Debug\netcoreapp3.1\Serilog.Extensions.Logging.File.dll
+C:\Users\uvev1\source\repos\ContactsWebAPI\ContactsWebAPI\bin\Debug\netcoreapp3.1\Serilog.Formatting.Compact.dll
+C:\Users\uvev1\source\repos\ContactsWebAPI\ContactsWebAPI\bin\Debug\netcoreapp3.1\Serilog.Sinks.Async.dll
+C:\Users\uvev1\source\repos\ContactsWebAPI\ContactsWebAPI\bin\Debug\netcoreapp3.1\Serilog.Sinks.File.dll
+C:\Users\uvev1\source\repos\ContactsWebAPI\ContactsWebAPI\bin\Debug\netcoreapp3.1\Serilog.Sinks.RollingFile.dll
+C:\Users\uvev1\source\repos\ContactsWebAPI\ContactsWebAPI\bin\Debug\netcoreapp3.1\ServiceStack.Text.dll
+C:\Users\uvev1\source\repos\ContactsWebAPI\ContactsWebAPI\obj\Debug\netcoreapp3.1\Razor\Views\Index.cshtml.g.cs
+C:\Users\uvev1\source\repos\ContactsWebAPI\ContactsWebAPI\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\uvev1\source\repos\ContactsWebAPI\ContactsWebAPI\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\uvev1\source\repos\ContactsWebAPI\ContactsWebAPI\bin\Debug\netcoreapp3.1\AutoMapper.dll

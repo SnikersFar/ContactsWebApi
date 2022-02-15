@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\uvev1\\Source\\Repos\\ContactsWebApi\\ContactsWebAPI\\ContactsWebAPI.csproj": {}
+    "C:\\Users\\uvev1\\source\\repos\\ContactsWebAPI\\ContactsWebAPI\\ContactsWebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\uvev1\\Source\\Repos\\ContactsWebApi\\ContactsWebAPI\\ContactsWebAPI.csproj": {
+    "C:\\Users\\uvev1\\source\\repos\\ContactsWebAPI\\ContactsWebAPI\\ContactsWebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\uvev1\\Source\\Repos\\ContactsWebApi\\ContactsWebAPI\\ContactsWebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\uvev1\\source\\repos\\ContactsWebAPI\\ContactsWebAPI\\ContactsWebAPI.csproj",
         "projectName": "ContactsWebAPI",
-        "projectPath": "C:\\Users\\uvev1\\Source\\Repos\\ContactsWebApi\\ContactsWebAPI\\ContactsWebAPI.csproj",
+        "projectPath": "C:\\Users\\uvev1\\source\\repos\\ContactsWebAPI\\ContactsWebAPI\\ContactsWebAPI.csproj",
         "packagesPath": "C:\\Users\\uvev1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\uvev1\\Source\\Repos\\ContactsWebApi\\ContactsWebAPI\\obj\\",
+        "outputPath": "C:\\Users\\uvev1\\source\\repos\\ContactsWebAPI\\ContactsWebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -44,6 +44,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[11.0.1, )"
+            },
             "EntityFramework.Migrations": {
               "target": "Package",
               "version": "[7.0.0-beta2, )"
