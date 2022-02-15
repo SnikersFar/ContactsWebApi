@@ -25,7 +25,6 @@ C:\Users\uvev1\source\repos\ContactsWebAPI\ContactsWebAPI\bin\Debug\netcoreapp3.
 C:\Users\uvev1\source\repos\ContactsWebAPI\ContactsWebAPI\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 C:\Users\uvev1\source\repos\ContactsWebAPI\ContactsWebAPI\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
 C:\Users\uvev1\source\repos\ContactsWebAPI\ContactsWebAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\uvev1\source\repos\ContactsWebAPI\ContactsWebAPI\obj\Debug\netcoreapp3.1\ContactsWebAPI.csproj.AssemblyReference.cache
 C:\Users\uvev1\source\repos\ContactsWebAPI\ContactsWebAPI\obj\Debug\netcoreapp3.1\ContactsWebAPI.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\uvev1\source\repos\ContactsWebAPI\ContactsWebAPI\obj\Debug\netcoreapp3.1\ContactsWebAPI.AssemblyInfoInputs.cache
 C:\Users\uvev1\source\repos\ContactsWebAPI\ContactsWebAPI\obj\Debug\netcoreapp3.1\ContactsWebAPI.AssemblyInfo.cs

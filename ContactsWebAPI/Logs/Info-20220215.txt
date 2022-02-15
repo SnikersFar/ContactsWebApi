@@ -1,0 +1,3 @@
+[Information] Smile 2022-02-15T16:13:25.2857181+03:00 Application started. Press Ctrl+C to shut down. 
+[Information] Smile 2022-02-15T16:13:25.2981908+03:00 Hosting environment: "Development" 
+[Information] Smile 2022-02-15T16:13:25.3008942+03:00 Content root path: "C:\Users\uvev1\Source\Repos\ContactsWebApi\ContactsWebAPI" 

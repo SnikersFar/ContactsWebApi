@@ -2,6 +2,7 @@
 using ContactsWebAPI.EfStuff.Repository;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace ContactsWebAPI.EfStuff
@@ -26,6 +27,8 @@ namespace ContactsWebAPI.EfStuff
                         DateCreateAccount = System.DateTime.Now,
                         
                     };
+                    user.Texts = new List<Text>();
+                    user.Photos = new List<Photo>();
 
                     var text = new Text
                     {

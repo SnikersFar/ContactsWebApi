@@ -29,25 +29,21 @@ namespace ContactsWebAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            string connectString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=WebMaze12;Integrated Security=True;";
+            string connectString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=WebContacts;Integrated Security=True;";
             services.AddDbContext<WebContext>(x => x.UseSqlServer(connectString));
+            var provider = new MapperConfigurationExpression();
+            provider.CreateMap<Author, AuthorViewModel>();
+            provider.CreateMap<Text, TextViewModel>()
+                .ForMember(vw => vw.AutrhorId, db => db.MapFrom(model => model.Author.Id));
+            provider.CreateMap<Photo, PhotoViewModel>()
+                .ForMember(vw => vw.AutrhorId, db => db.MapFrom(model => model.Author.Id));
+            var mapperConfiguration = new MapperConfiguration(provider);
+            var mapper = new Mapper(mapperConfiguration);
+            services.AddScoped<IMapper>(x => mapper);
 
             services.AddScoped<AuthorRepository>();
             services.AddScoped<TextRepository>();
             services.AddScoped<PhotoRepository>();
-
-            var provider = new MapperConfigurationExpression();
-            provider.CreateMap<Author, AuthorViewModel>();
-
-            provider.CreateMap<Text, TextViewModel>()
-                .ForMember(vw => vw.AutrhorId, db => db.MapFrom(model => model.Author.Id));
-            
-            provider.CreateMap<Photo, PhotoViewModel>()
-                .ForMember(vw => vw.AutrhorId, db => db.MapFrom(model => model.Author.Id));
-
-            var mapperConfiguration = new MapperConfiguration(provider);
-            var mapper = new Mapper(mapperConfiguration);
-            services.AddScoped<IMapper>(x => mapper);
 
             services.AddControllersWithViews();
             services.AddMvc();

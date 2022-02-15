@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ContactsWebAPI.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class AddDb : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -11,7 +11,7 @@ namespace ContactsWebAPI.Migrations
                 name: "Authors",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     NickName = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -27,12 +27,12 @@ namespace ContactsWebAPI.Migrations
                 name: "Photos",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UrlContent = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     SizeOfPhoto = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    AuthorId = table.Column<int>(type: "int", nullable: true),
+                    AuthorId = table.Column<long>(type: "bigint", nullable: true),
                     Cost = table.Column<long>(type: "bigint", nullable: false),
                     CountOfBuying = table.Column<long>(type: "bigint", nullable: false),
                     Rating = table.Column<long>(type: "bigint", nullable: false)
@@ -52,14 +52,14 @@ namespace ContactsWebAPI.Migrations
                 name: "Texts",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Content = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Size = table.Column<long>(type: "bigint", nullable: false),
                     DateCreate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Cost = table.Column<long>(type: "bigint", nullable: false),
-                    AuthorId = table.Column<int>(type: "int", nullable: true),
+                    AuthorId = table.Column<long>(type: "bigint", nullable: true),
                     CountOfBuying = table.Column<long>(type: "bigint", nullable: false),
                     Rating = table.Column<long>(type: "bigint", nullable: false)
                 },

@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ContactsWebAPI.Migrations
 {
     [DbContext(typeof(WebContext))]
-    [Migration("20220213114748_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20220215130845_AddDb")]
+    partial class AddDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,9 +23,9 @@ namespace ContactsWebAPI.Migrations
 
             modelBuilder.Entity("ContactsWebAPI.EfStuff.DbModel.Author", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
+                        .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<long>("Age")
@@ -47,13 +47,13 @@ namespace ContactsWebAPI.Migrations
 
             modelBuilder.Entity("ContactsWebAPI.EfStuff.DbModel.Photo", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
+                        .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("AuthorId")
-                        .HasColumnType("int");
+                    b.Property<long?>("AuthorId")
+                        .HasColumnType("bigint");
 
                     b.Property<long>("Cost")
                         .HasColumnType("bigint");
@@ -82,13 +82,13 @@ namespace ContactsWebAPI.Migrations
 
             modelBuilder.Entity("ContactsWebAPI.EfStuff.DbModel.Text", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
+                        .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("AuthorId")
-                        .HasColumnType("int");
+                    b.Property<long?>("AuthorId")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Content")
                         .HasColumnType("nvarchar(max)");

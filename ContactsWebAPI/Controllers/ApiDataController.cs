@@ -22,13 +22,13 @@ namespace ContactsWebAPI.Controllers
             AuthorRepository authorRepository,
             TextRepository textRepository,
             PhotoRepository photoRepository,
-            ILogger<ApiDataController> logger
-            )
+            ILogger<ApiDataController> logger, IMapper mapper)
         {
             _authorRepository = authorRepository;
             _textRepository = textRepository;
             _photoRepository = photoRepository;
             _logger = logger;
+            _mapper = mapper;
         }
 
         [HttpGet]
