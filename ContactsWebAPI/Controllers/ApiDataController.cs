@@ -83,9 +83,9 @@ namespace ContactsWebAPI.Controllers
         [HttpPut]
         public void SetRatingPhoto(long id, int rate)
         {
-            if (rate > 0 && rate <= 5)
+            var photo = _photoRepository.Get(id);
+            if (rate > 0 && rate <= 5 && photo != null)
             {
-                var photo = _photoRepository.Get(id);
                 photo.Rating = rate;
                 _photoRepository.Save(photo);
             }
